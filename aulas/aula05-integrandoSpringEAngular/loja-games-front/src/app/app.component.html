@@ -1,0 +1,23 @@
+<div class="container d-flex flex-wrap justify-content-center">
+  <div class="row" *ngFor="let jogo of jogos">
+
+    <!-- card -->
+    <div class="card mr-5 mb-3" style="width: 18rem;">
+      <img src="{{ jogo.imagem }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ jogo.nome }}</h5>
+        <p class="card-text">{{ jogo.descricao }}</p>
+        <h1 class="card-title pricing-card-title">R$ {{ jogo.preco }}</h1>
+
+        <!-- <div class="container d-flex justify-content-center mb-3">
+          <span class="badge badge-dark mr-1">Terror Psicológico</span>
+          <span class="badge badge-dark mr-1">Atmosférico</span>
+          <span class="badge badge-dark">Sombrio</span>
+        </div>
+
+        <a href="https://store.steampowered.com/app/282140/?curator_clanid=4777282&utm_source=SteamDB" class="btn btn-primary">buy on Steam</a> -->
+      </div>
+    </div>
+
+  </div>
+</div>
