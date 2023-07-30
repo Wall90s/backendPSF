@@ -17,7 +17,8 @@ public class BancoDeDados {
                         "A Lenda de Zelda",
                         "Mobile Version note: this is the remake of the Nintendo Entertainment System (NES) one. Happy Gaming The Legend of Zelda Mobile",
                         0.0,
-                        "https://prodigits.co.uk/thumbs/java-games/thumbs/All/Games/s/1346616544.jpg")
+                        "https://prodigits.co.uk/thumbs/java-games/thumbs/All/Games/s/1346616544.jpg",
+                        false)
         );
         jogos.add(
                 new Jogo(
@@ -25,11 +26,22 @@ public class BancoDeDados {
                         "Wattam",
                         "Wattam is a game about the joys of friendship and discovery, from the imagination of Keita Takahashi (creator of Katamari Damacy and Noby Noby Boy) and developer Funomena.",
                         49.99,
-                        "https://cdn.cloudflare.steamstatic.com/steam/apps/702680/header.jpg?t=1689529808")
+                        "https://cdn.cloudflare.steamstatic.com/steam/apps/702680/header.jpg?t=1689529808",
+                        false)
         );
     }
 
     public List<Jogo> findAll(){
         return jogos;
+    }
+
+    public Jogo save(Jogo novoJogo){
+        for (Jogo jogo : jogos) {
+            if(jogo.getId() == novoJogo.getId()){
+                return null;
+            }
+        }
+        jogos.add(novoJogo);
+        return novoJogo;
     }
 }

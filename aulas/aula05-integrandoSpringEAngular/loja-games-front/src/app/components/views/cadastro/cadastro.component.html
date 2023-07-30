@@ -1,0 +1,9 @@
+<h1>Cadastrar novo Jogo</h1>
+<form>
+  <input type="number" name="primeiro-campo" id="id" [(ngModel)]="jogo.id" placeholder="id">
+  <input type="text" name="segundo-campo" id="imagem" [(ngModel)]="jogo.imagem" placeholder="imagem url">
+  <input type="text" name="terceiro-campo" id="nome" [(ngModel)]="jogo.nome" placeholder="nome">
+  <input type="text" name="quarto-campo" id="descricao" [(ngModel)]="jogo.descricao" placeholder="descricao">
+  <input (keydown)="saveJogo" type="number" name="quinto-campo" id="preco" [(ngModel)]="jogo.preco" placeholder="preço">
+  <button (click)="saveJogo()">salvar</button>
+</form>

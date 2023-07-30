@@ -16,4 +16,8 @@ public class JogoService {
     public List<Jogo> getAll(){
         return bancoDeDados.findAll();
     }
+
+    public Jogo save(Jogo novoJogo){
+        return bancoDeDados.save(novoJogo);
+    }
 }

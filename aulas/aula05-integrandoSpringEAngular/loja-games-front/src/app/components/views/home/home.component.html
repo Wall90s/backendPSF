@@ -1,0 +1,6 @@
+<h1 class="d-flex justify-content-center">lista de jogos</h1>
+<div class="container d-flex flex-wrap justify-content-center">
+  <div class="row" *ngFor="let jogo of jogos">
+    <app-card [jogo] = jogo></app-card>
+  </div>
+</div>

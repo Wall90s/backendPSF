@@ -7,10 +7,8 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'loja-games-front';
-
-  jogos!: Jogo[];
 
   constructor(private httpClient: HttpClient) {
     // this.jogos = [];
@@ -38,16 +36,4 @@ export class AppComponent implements OnInit{
     //   )
     // );
   }
-
-  ngOnInit(): void {
-    this.getJogos();
-  }
-
-  getJogos(){
-    this.httpClient.get<Jogo[]>('http://localhost:8080/jogos').subscribe(
-      resposta => {
-        this.jogos = resposta
-      });
-  }
-
 }

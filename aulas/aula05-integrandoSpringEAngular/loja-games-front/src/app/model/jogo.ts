@@ -4,13 +4,5 @@ export class Jogo {
   public descricao!: string;
   public preco!: number;
   public imagem!: string;
-
-  constructor(id: number, nome: string, descricao: string, preco: number, imagem: string) {
-    this.id = id;
-    this.nome = nome;
-    this.descricao = descricao;
-    this.descricao = descricao;
-    this.preco = preco;
-    this.imagem = imagem;
-  }
+  public esta_favoritado!: boolean;
 }

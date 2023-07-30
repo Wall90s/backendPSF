@@ -1,5 +1,7 @@
 package com.example.lojagamesback.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Jogo {
     private int id;
     private String nome;
@@ -7,15 +9,19 @@ public class Jogo {
     private double preco;
     private String imagem;
 
+    @JsonProperty("esta_favoritado")
+    private boolean estaFavoritado;
+
     public Jogo() {
     }
 
-    public Jogo(int id, String nome, String descricao, double preco, String imagem) {
+    public Jogo(int id, String nome, String descricao, double preco, String imagem, boolean estaFavoritado) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.imagem = imagem;
+        this.estaFavoritado = estaFavoritado;
     }
 
     public int getId() {
@@ -56,5 +62,13 @@ public class Jogo {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+    public boolean isEstaFavoritado() {
+        return estaFavoritado;
+    }
+
+    public void setEstaFavoritado(boolean estaFavoritado) {
+        this.estaFavoritado = estaFavoritado;
     }
 }
