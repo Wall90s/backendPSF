@@ -1,7 +1,7 @@
 package com.example.lojagamesback.service;
 
 import com.example.lojagamesback.model.Jogo;
-import com.example.lojagamesback.repository.BancoDeDados;
+import com.example.lojagamesback.repository.JogoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +11,13 @@ import java.util.List;
 public class JogoService {
 
     @Autowired
-    private BancoDeDados bancoDeDados;
+    private JogoRepository jogoRepository;
 
     public List<Jogo> getAll(){
-        return bancoDeDados.findAll();
+        return jogoRepository.findAll();
     }
 
     public Jogo save(Jogo novoJogo){
-        return bancoDeDados.save(novoJogo);
+        return jogoRepository.save(novoJogo);
     }
 }
