@@ -15,7 +15,7 @@ import java.util.List;
 public class JogoController {
 
     @Autowired
-    JogoService jogoService;
+    private JogoService jogoService;
 
     @GetMapping
     public ResponseEntity<List<Jogo>> getAll(){
@@ -24,11 +24,11 @@ public class JogoController {
 
     @PostMapping
     public ResponseEntity<Jogo> save(@RequestBody Jogo novoJogo){
-        Jogo jogoRetornado = jogoService.save(novoJogo);
-        if(jogoRetornado == null){
+        if(novoJogo == null){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body(jogoRetornado);
+        jogoService.save(novoJogo);
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoJogo);
     }
 
 
