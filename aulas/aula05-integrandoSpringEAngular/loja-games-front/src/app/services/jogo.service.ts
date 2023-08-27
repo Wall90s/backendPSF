@@ -18,4 +18,8 @@ export class JogoService {
   public postJogo(novoJogo: Jogo): Observable<Jogo>{
     return this.httpClient.post<Jogo>(this.apiUrl, novoJogo);
   }
+
+  public favoritarJogo(id: number): Observable<Jogo>{
+    return this.httpClient.put<Jogo>(`${this.apiUrl}/favoritar/${id}`, null);
+  }
 }

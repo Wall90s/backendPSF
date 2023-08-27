@@ -1,0 +1,8 @@
+.favoritar {
+  color: grey;
+  cursor: pointer;
+}
+
+.estaFavoritado {
+  color: rgb(64, 224, 192);
+}
