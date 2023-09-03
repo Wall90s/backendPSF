@@ -16,9 +16,11 @@ export class CadastroComponent implements OnInit{
   }
 
   saveJogo(){
+    this.jogo.id=0;
     this.jogoService.postJogo(this.jogo).subscribe(resposta =>{
       resposta
     })
+    console.log(this.jogo)
   }
 
 

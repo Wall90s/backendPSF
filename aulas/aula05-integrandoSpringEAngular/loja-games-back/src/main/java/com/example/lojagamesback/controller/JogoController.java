@@ -36,4 +36,10 @@ public class JogoController {
         Jogo jogo = jogoService.favoritar(id);
         return ResponseEntity.status(HttpStatus.OK).body(jogo);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity delete(@PathVariable int id){
+        jogoService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

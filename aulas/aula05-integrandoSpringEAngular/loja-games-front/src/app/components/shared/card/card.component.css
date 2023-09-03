@@ -6,3 +6,28 @@
 .estaFavoritado {
   color: rgb(64, 224, 192);
 }
+
+.headerMargin{
+  margin-bottom: 30px;
+}
+
+.x-circle {
+  font-size: 20px;
+  color: gray;
+  position: relative;
+  top: 15px;
+  right: 9px;
+  z-index: 1;
+  cursor: pointer;
+  /* visibility: hidden; */
+}
+
+.x-circle:hover{
+  color: crimson;
+}
+
+/* .container:hover {
+  .x-circle {
+    visibility: visible;
+  }
+} */

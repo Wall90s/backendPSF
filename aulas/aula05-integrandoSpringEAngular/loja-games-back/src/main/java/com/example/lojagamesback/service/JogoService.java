@@ -34,4 +34,8 @@ public class JogoService {
 
         return null;
     }
+
+    public void delete(int id){
+        jogoRepository.deleteById(id);
+    }
 }
